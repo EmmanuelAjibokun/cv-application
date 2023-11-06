@@ -3,6 +3,7 @@ import './App.css'
 import FastAction from './components/FastAction'
 import Personal from './components/personal/Personal'
 import Education from './components/education/Education'
+import Experience from './components/experience/Experience'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
         <FastAction />
         <Personal />
         <Education />
+        <Experience />
       </sidebar>
       <section></section>
     </>
