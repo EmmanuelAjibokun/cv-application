@@ -1,3 +1,11 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
 .content {
   border-radius: 8px;
   background-color: #1a1a1a;
@@ -10,10 +18,10 @@
   justify-content: center;
 }
 
-.sidebar {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1em;
+
+.cv {
+  background-color: #303030;
+  min-height: 600px;
+  width: 100%;
+  flex-grow: 1;
 }

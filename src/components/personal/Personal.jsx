@@ -1,6 +1,7 @@
 import "./personal.css"
 
-export default function Personal () {
+export default function Personal({ val, setVal }) {
+
   return (
     <div className="container">
       <h2>Personal Details</h2>
@@ -9,7 +10,8 @@ export default function Personal () {
           <p>Full name</p>
           <input 
             type="text" 
-            value="Emmanuel Ajibokun" 
+            value= {val.person}
+            onChange={(e)=>setVal.setPerson(e.target.value)}
             placeholder="first and last name" />
           
         </div>
@@ -17,21 +19,24 @@ export default function Personal () {
         <p>Email <span>recommended</span></p>
         <input 
           type="text" 
-          value="emmanuelajibokun9@gmail.com" 
+          value={val.mail}
+          onChange={(e) => setVal.setMail(e.target.value)}
           placeholder="Enter email address" />
         </div>
         <div>
         <p>Phone number <span>recommended</span></p>
         <input 
           type="number" 
-          value={+234901234567}
+          value={val.num}
+          onChange={(e) => setVal.setMail(e.target.value)}
           placeholder="Enter phone number" />
         </div>
         <div>
         <p>Address <span>recommended</span></p>
         <input 
           type="text" 
-          value="Lagos, Nigeria" 
+          value={val.addr}
+          onChange={e => setVal.setAddr(e.target.value)}
           placeholder="City, Country" />
         </div>
       </div>

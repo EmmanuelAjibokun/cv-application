@@ -42,10 +42,10 @@ export default function NewExperience() {
       </div>
       <div>
         <p>Description <span>optional</span></p>
-        <input 
-          type="text" 
+        <textarea
+          rows={10}
           value="" 
-          placeholder="Enter Location" />
+          placeholder="Enter Location"></textarea>
       </div>
 
       <Delete />
