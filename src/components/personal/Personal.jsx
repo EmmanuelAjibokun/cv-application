@@ -28,7 +28,7 @@ export default function Personal({ val, setVal }) {
         <input 
           type="number" 
           value={val.num}
-          onChange={(e) => setVal.setMail(e.target.value)}
+          onChange={(e) => setVal.setNum(e.target.value)}
           placeholder="Enter phone number" />
         </div>
         <div>

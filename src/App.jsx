@@ -1,10 +1,9 @@
-// import { useState } from 'react'
 import './App.css'
 import FastAction from './components/FastAction'
 import Personal from './components/personal/Personal'
 import Education from './components/education/Education'
 import Experience from './components/experience/Experience'
-import Template from './components/template'
+import Template from './components/template/Template'
 
 import { useState } from 'react'
 
@@ -15,7 +14,7 @@ function App() {
   const [addr, setAddr] = useState("Lagos, Nigeria")
 
   return (
-    <div style={{display: 'flex'}}>
+    <div className='app'>
       <sidebar className='sidebar'>
         <div className='content'>
           <div>Content</div>

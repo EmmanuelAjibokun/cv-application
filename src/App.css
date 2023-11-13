@@ -1,12 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  display: flex;
+  width: 100%;
+}
+
 .sidebar {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1em;
+  padding: 1.5em;
 }
 
 .content {
+  width: 100%;
   border-radius: 8px;
   background-color: #1a1a1a;
   cursor: pointer;
@@ -18,10 +29,43 @@
   justify-content: center;
 }
 
+.content div {
+  flex-grow: 1;
+  text-align: center;
+}
 
 .cv {
   background-color: #303030;
   min-height: 600px;
+  flex: 1;
+}
+
+/* template.css */
+
+.template {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-  flex-grow: 1;
+}
+
+.header {
+  padding: 2em;
+  width: 100%;
+}
+
+.details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8em;
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+}
+
+.detail p {
+  margin-left: 0.2em;
+  color: #8585ff;
 }
