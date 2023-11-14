@@ -22,6 +22,21 @@ export default function Template({val}) {
             <p>{val.addr}</p>
           </div>
         </div>
+        <hr />
+      </div>
+      <div className="body">
+        <div className="subbody">
+          <h4>Education</h4>
+          <div className="cat">
+            <div className="left_side">
+
+            </div>
+            <div className="right_side"></div>
+          </div>
+        </div>
+        <div className="subbody">
+          <h4>Professional Experience</h4>
+        </div>
       </div>
     </div>
   )

@@ -69,3 +69,10 @@
   margin-left: 0.2em;
   color: #8585ff;
 }
+
+/* hr {
+  border: 1px solid red;
+} */
+.subbody h4 {
+  text-align: center;
+}

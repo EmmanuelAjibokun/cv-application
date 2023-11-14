@@ -8,10 +8,20 @@ import Template from './components/template/Template'
 import { useState } from 'react'
 
 function App() {
+  // Personal component states
   const [person, setPerson] = useState("Emmanuel Ajibokun")
   const [mail, setMail] = useState("Emmanuelajibokunedu@gmail.com")
   const [num, setNum] = useState("+234901234567")
   const [addr, setAddr] = useState("Lagos, Nigeria")
+
+  // Education states
+  const [school, setSchool] = useState("FUTA")
+  const [position, setPosition] = useState("Applied Geology")
+  const [startdate, setStartdate] = useState("17/02/2019")
+  const [enddate, setEnddate] = useState("present")
+  const [location, setLocation] = useState("Akure, Nigeria")
+
+  // Experience states
 
   return (
     <div className='app'>
@@ -20,8 +30,14 @@ function App() {
           <div>Content</div>
         </div>
         <FastAction />
-        <Personal val={{person, mail, num, addr}} setVal={{setPerson, setMail, setNum, setAddr}} />
-        <Education />
+        <Personal 
+          val={{person, mail, num, addr}} 
+          setVal={{setPerson, setMail, setNum, setAddr}} 
+          />
+        <Education 
+          val={{school, position, startdate, enddate, location}} 
+          setVal={{setSchool, setPosition, setStartdate, setEnddate, setLocation}} 
+          />
         <Experience />
       </sidebar>
       <sections className="cv">
