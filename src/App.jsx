@@ -16,7 +16,7 @@ function App() {
 
   // Education states
   const [school, setSchool] = useState("FUTA")
-  const [position, setPosition] = useState("Applied Geology")
+  const [degree, setDegree] = useState("Applied Geology")
   const [startdate, setStartdate] = useState("17/02/2019")
   const [enddate, setEnddate] = useState("present")
   const [location, setLocation] = useState("Akure, Nigeria")
@@ -35,8 +35,8 @@ function App() {
           setVal={{setPerson, setMail, setNum, setAddr}} 
           />
         <Education 
-          val={{school, position, startdate, enddate, location}} 
-          setVal={{setSchool, setPosition, setStartdate, setEnddate, setLocation}} 
+          val={{school, degree, startdate, enddate, location}} 
+          setVal={{setSchool, setDegree, setStartdate, setEnddate, setLocation}} 
           />
         <Experience />
       </sidebar>
