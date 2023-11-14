@@ -11,7 +11,7 @@ export default function NewEducation({ val, setVal}) {
           type="text" 
           value={val.school} 
           placeholder="Enter School / University"
-          onChange={setVal.setSchool} />
+          onChange={e => setVal.setSchool(e.target.value)} />
         
       </div>
       <div>
@@ -20,7 +20,7 @@ export default function NewEducation({ val, setVal}) {
         type="text" 
         value={val.degree} 
         placeholder="Enter Degree / Field Of Study"
-        onChange={val.setDegree} />
+        onChange={e => setVal.setDegree(e.target.value)} />
       </div>
       <div>
       <p>Start Date</p>
@@ -28,7 +28,7 @@ export default function NewEducation({ val, setVal}) {
         type="text" 
         value={val.startdate}
         placeholder="Enter Start Date"
-        onChange={val.setStartdate} />
+        onChange={e => setVal.setStartdate(e.target.value)} />
       </div>
       <div>
       <p>End Date</p>
@@ -36,7 +36,7 @@ export default function NewEducation({ val, setVal}) {
         type="text" 
         value={val.enddate}
         placeholder="Enter End Date"
-        onChange={val.setEnddate} />
+        onChange={e => setVal.setEnddate(e.target.value)} />
       </div>
       <div>
       <p>Location <span>optional</span></p>
@@ -44,7 +44,7 @@ export default function NewEducation({ val, setVal}) {
         type="text" 
         value={val.location}
         placeholder="Enter Location"
-        onChange={val.setLocation} />
+        onChange={e => setVal.setLocation(e.target.value)} />
       </div>
 
       <Delete />

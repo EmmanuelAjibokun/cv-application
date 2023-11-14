@@ -41,7 +41,10 @@ function App() {
         <Experience />
       </sidebar>
       <sections className="cv">
-        <Template val={{person, mail, num, addr}} />
+        <Template 
+          val={{person, mail, num, addr}} 
+          educationVal={{school, degree, startdate, enddate, location}} 
+          />
       </sections>
     </div>
   )
