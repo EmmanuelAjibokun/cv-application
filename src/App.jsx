@@ -22,6 +22,12 @@ function App() {
   const [location, setLocation] = useState("Akure, Nigeria")
 
   // Experience states
+  const [company, setCompany] = useState("OODT")
+  const [position, setPosition] = useState("Interning Student")
+  const [startdate2, setStartdate2] = useState("17/02/2019")
+  const [enddate2, setEnddate2] = useState("present")
+  const [location2, setLocation2] = useState("Akure, Nigeria")
+  const [description, setDescription] = useState("Data Scientist and Machine Learning Engineer")
 
   return (
     <div className='app'>
@@ -38,7 +44,9 @@ function App() {
           val={{school, degree, startdate, enddate, location}} 
           setVal={{setSchool, setDegree, setStartdate, setEnddate, setLocation}} 
           />
-        <Experience />
+        <Experience
+          val={{company, position, startdate2, enddate2, location2, description}}
+          setVal={{setCompany, setPosition, setStartdate2, setEnddate2, setLocation2, setDescription}} />
       </sidebar>
       <sections className="cv">
         <Template 

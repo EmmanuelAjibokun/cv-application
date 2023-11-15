@@ -76,3 +76,8 @@
 .subbody h4 {
   text-align: center;
 }
+
+.cat {
+  display: flex;
+  gap: 2.5em;
+}
