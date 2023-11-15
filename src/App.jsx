@@ -52,6 +52,7 @@ function App() {
         <Template 
           val={{person, mail, num, addr}} 
           educationVal={{school, degree, startdate, enddate, location}} 
+          experienceVal={{company, position, startdate2, enddate2, location2, description}} 
           />
       </sections>
     </div>
