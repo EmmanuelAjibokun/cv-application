@@ -1,12 +1,41 @@
 .container {
-  border-radius: 8px;
+  border-radius: .5rem;
   background-color: #1a1a1a;
-  padding: 0.6em 1.2em;
-  /* font-size: .2em; */
+  padding: 1.2rem 1.3rem;
+  font-size: 1.25em;
   font-weight: 500;
   font-family: inherit;
   color: #ffffff;
+  width: 100%;
 }
+
+.container h2 {
+  margin: 0;
+}
+
 p {
   margin: 0;
+  font-weight: 500;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-details div {
+  margin: .8em 0 0 0;
+}
+
+.user-details input {
+  width: 100%;
+  background-color: #303030;
+  padding: 0.6em 1.2em;
+  outline: none;
+  border-radius: .3rem;
+}
+
+.user-details span {
+  font-size: .8rem;
+  color: rgba(255, 255, 255, 0.87);
 }
