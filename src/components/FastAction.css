@@ -3,5 +3,8 @@
   flex-direction: row;
   flex-wrap: wrap;
   gap: .5em;
-  
+}
+
+.buttons button {
+  flex: 1;
 }
