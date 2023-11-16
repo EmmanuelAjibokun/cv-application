@@ -1,0 +1,19 @@
+.dropdown_header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dropdown_header img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.dropdown_header h2 {
+  margin-right: auto;
+  margin-left: .6rem;
+}
+
+.dropdown_header .caret {
+
+}
