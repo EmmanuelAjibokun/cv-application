@@ -21,6 +21,7 @@ p {
 .user-details {
   display: flex;
   flex-direction: column;
+  text-align: start;
 }
 
 .user-details div {

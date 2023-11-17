@@ -5,9 +5,9 @@ export default function Capsule({val, setVal}) {
   const [display, setDisplay] = useState(false)
 
   return (
-    <div>
-      <span className="school-name" onClick={() => setDisplay(true)}>FUTA</span>
-      {display && <NewEducation val={val} setVal={setVal} display={{display, setDisplay}} />}
+    <div className="capsule">
+      <p className="capsule-name" onClick={() => setDisplay(true)}>{val.school}</p>
+      {display && <NewEducation val={val} setVal={setVal} setDisplay={setDisplay} />}
     </div>
   )
 }

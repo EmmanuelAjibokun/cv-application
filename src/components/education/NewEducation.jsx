@@ -4,7 +4,7 @@ import Save from "../Save"
 import Delete from "../Delete"
 import Cancel from "../Cancel"
 
-export default function NewEducation({ val, setVal, display}) {
+export default function NewEducation({ val, setVal, setDisplay}) {
   return (
     <form action="#">
       <div className="user-details">
@@ -52,7 +52,7 @@ export default function NewEducation({ val, setVal, display}) {
 
         <div className="buttons">
           <Delete />
-          <Cancel display={display} />
+          <Cancel setDisplay={setDisplay} />
           <Save />
         </div>
       </div>

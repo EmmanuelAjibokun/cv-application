@@ -13,3 +13,17 @@
   margin-right: auto;
   margin-left: .6rem;
 }
+
+.education-list {
+  text-align: center;
+}
+
+.capsule-name:first-child {
+  padding-top: 1rem;
+}
+
+.add-btn {
+  background-color: #303030;
+  font-size: 1rem;
+  margin-top: 1rem;
+}

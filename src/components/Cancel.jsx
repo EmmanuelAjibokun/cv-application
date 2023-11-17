@@ -1,3 +1,3 @@
-export default function Cancel ({display}) {
-  return <button onClick={() => display.setDisplay(false)}>Cancel</button>
+export default function Cancel ({setDisplay}) {
+  return <button onClick={() => setDisplay(false)}>Cancel</button>
 }
