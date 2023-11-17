@@ -9,3 +9,6 @@ Currently, two official plugins are available:
 
 
 # CV template generator
+
+## Objective
+The main objective of this project is to gain practical understanding of how the `useState` hook works, thereby getting familiar with `Rendering` code and adding `Event Handler` to our react app.
