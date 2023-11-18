@@ -7,7 +7,7 @@ export default function EducationList({val, setVal}) {
   return (
     <div className="education-list">
       <Capsule val={val} setVal={setVal} display={{display, setDisplay}} />
-      <button className="add-btn" >+ Education</button>
+      {display || <button className="add-btn" onClick={()=>setDisplay(true)} >+ Education</button>}
     </div>
   )
 }
