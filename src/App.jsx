@@ -6,6 +6,7 @@ import Experience from './components/experience/Experience'
 import Template from './components/template/Template'
 
 import { useState } from 'react'
+import { useImmer } from 'use-immer'
 
 function App() {
   // Personal component states
@@ -20,6 +21,16 @@ function App() {
   const [startdate, setStartdate] = useState("17/02/2019")
   const [enddate, setEnddate] = useState("present")
   const [location, setLocation] = useState("Akure, Nigeria")
+  const [newEducation, setNewEducation] = useState([
+    {
+      id: 0,
+      school: "FUTA",
+      degree: "Applied Geology",
+      startdate: "17/02/2019",
+      enddate: "present",
+      location: "Akure, Nigeria"
+    }
+  ])
 
   // Experience states
   const [company, setCompany] = useState("OODT")
@@ -41,9 +52,13 @@ function App() {
           setVal={{setPerson, setMail, setNum, setAddr}} 
           />
         <Education 
+          vals={newEducation} 
+          setVals={setNewEducation} 
+          />
+        {/* <Education 
           val={{school, degree, startdate, enddate, location}} 
           setVal={{setSchool, setDegree, setStartdate, setEnddate, setLocation}} 
-          />
+          /> */}
         <Experience
           val={{company, position, startdate2, enddate2, location2, description}}
           setVal={{setCompany, setPosition, setStartdate2, setEnddate2, setLocation2, setDescription}} />

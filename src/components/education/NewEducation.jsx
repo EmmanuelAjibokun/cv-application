@@ -4,50 +4,60 @@ import Save from "../Save"
 import Delete from "../Delete"
 import Cancel from "../Cancel"
 
-export default function NewEducation({ val, setVal, setDisplay}) {
+export default function NewEducation({ val, vals, setVals, setDisplay}) {
+  function handleChange(e) {
+    const newVals = [...vals]
+    newVals[0][e.target.name] = e.target.value
+    setVals(newVals)
+  }
+
   return (
     <form action="#">
       <div className="user-details">
         <div>
           <p>School</p>
-          <input 
-            type="text" 
-            value={val.school} 
+          <input
+            type="text"
+            name="school"
+            value={val.school}
             placeholder="Enter School / University"
-            onChange={e => setVal.setSchool(e.target.value)} />
-          
+            onChange={handleChange} />
         </div>
         <div>
         <p>Degree</p>
         <input 
-          type="text" 
+          type="text"
+          name="degree"
           value={val.degree} 
           placeholder="Enter Degree / Field Of Study"
-          onChange={e => setVal.setDegree(e.target.value)} />
+          onChange={handleChange} />
         </div>
         <div>
         <p>Start Date</p>
         <input 
           type="text" 
+          name="startdate"
           value={val.startdate}
           placeholder="Enter Start Date"
-          onChange={e => setVal.setStartdate(e.target.value)} />
+          onChange={handleChange} />
         </div>
         <div>
         <p>End Date</p>
         <input 
           type="text" 
+          name="enddate"
           value={val.enddate}
           placeholder="Enter End Date"
-          onChange={e => setVal.setEnddate(e.target.value)} />
+          onChange={handleChange} />
         </div>
         <div>
         <p>Location <span>optional</span></p>
         <input 
           type="text" 
+          name="location"
           value={val.location}
           placeholder="Enter Location"
-          onChange={e => setVal.setLocation(e.target.value)} />
+          onChange={handleChange} />
         </div>
 
         <div className="buttons">

@@ -7,7 +7,7 @@ import EducationList from "./EducationList"
 import { useState } from "react"
 // import {CSSTransition} from "react-transition-group"
 
-export default function Education({val, setVal}) {
+export default function Education({vals, setVals}) {
   const [isActive, setIsActive] = useState(false);
   const style = {
     transform: isActive ? "rotate(180deg)": "",
@@ -24,8 +24,8 @@ export default function Education({val, setVal}) {
         <h2>Education</h2>
         <img src={caret} alt="caret dropdown icon" className="caret" style={style} />
       </div>
-      <EducationList val={val} setVal={setVal} />
-      {isActive && <NewEducation val={val} setVal={setVal} />}
+      <EducationList vals={vals} setVals={setVals} />
+      {isActive && <NewEducation val={vals} setVal={setVals} />}
     </div>
   )
 }
