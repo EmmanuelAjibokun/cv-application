@@ -6,7 +6,7 @@ export default function EducationList({vals, setVals}) {
 
   return (
     <div className="education-list">
-      <Capsule vals={vals} setVals={setVals} display={{display, setDisplay}} />
+      {vals.map(val => <Capsule key={val.id} index={vals.indexOf(val)} vals={vals} val={val} setVals={setVals} display={{display, setDisplay}} />)}
       {display || <button className="add-btn" onClick={()=>setDisplay(true)} >+ Education</button>}
     </div>
   )

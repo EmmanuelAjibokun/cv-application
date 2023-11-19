@@ -4,10 +4,10 @@ import Save from "../Save"
 import Delete from "../Delete"
 import Cancel from "../Cancel"
 
-export default function NewEducation({ val, vals, setVals, setDisplay}) {
+export default function NewEducation({ index, val, vals, setVals, setDisplay}) {
   function handleChange(e) {
     const newVals = [...vals]
-    newVals[0][e.target.name] = e.target.value
+    newVals[index][e.target.name] = e.target.value
     setVals(newVals)
   }
 

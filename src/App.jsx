@@ -29,6 +29,14 @@ function App() {
       startdate: "17/02/2019",
       enddate: "present",
       location: "Akure, Nigeria"
+    },
+    {
+      id: 1,
+      school: "UNILAG",
+      degree: "Applied Geophysics",
+      startdate: "17/02/2019",
+      enddate: "present",
+      location: "Lagos, Nigeria"
     }
   ])
 
