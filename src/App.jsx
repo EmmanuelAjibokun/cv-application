@@ -28,7 +28,8 @@ function App() {
       degree: "Applied Geology",
       startdate: "17/02/2019",
       enddate: "present",
-      location: "Akure, Nigeria"
+      location: "Akure, Nigeria",
+      display: false
     },
     {
       id: 1,
@@ -36,7 +37,8 @@ function App() {
       degree: "Applied Geophysics",
       startdate: "17/02/2019",
       enddate: "present",
-      location: "Lagos, Nigeria"
+      location: "Lagos, Nigeria",
+      display: false
     }
   ])
 
