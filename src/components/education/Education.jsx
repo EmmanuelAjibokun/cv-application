@@ -1,4 +1,4 @@
-import NewEducation from "./NewEducation"
+// import NewEducation from "./NewEducation"
 import education from '../../assets/education.png'
 import caret from '../../assets/caret.png'
 import './education.css'
@@ -24,8 +24,8 @@ export default function Education({vals, setVals}) {
         <h2>Education</h2>
         <img src={caret} alt="caret dropdown icon" className="caret" style={style} />
       </div>
-      <EducationList vals={vals} setVals={setVals} />
-      {isActive && <NewEducation val={vals} setVal={setVals} />}
+      {isActive && <EducationList vals={vals} setVals={setVals} />}
+      {/* {isActive && <NewEducation val={vals} setVal={setVals} />} */}
     </div>
   )
 }

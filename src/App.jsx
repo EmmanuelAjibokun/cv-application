@@ -6,7 +6,6 @@ import Experience from './components/experience/Experience'
 import Template from './components/template/Template'
 
 import { useState } from 'react'
-import { useImmer } from 'use-immer'
 
 function App() {
   // Personal component states
