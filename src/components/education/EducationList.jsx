@@ -3,7 +3,8 @@ import Capsule from "./capsule"
 // import NewEducation from "./NewEducation"
 
 export default function EducationList({vals, setVals}) {
-  const [display, setDisplay] = useState(false)
+  const [display, setDisplay] = useState(false);
+  const maxId = Math.max(...vals.map(item => item.id));
 
   return (
     <div className="education-list">
@@ -11,7 +12,7 @@ export default function EducationList({vals, setVals}) {
       {display || <button className="add-btn" onClick={()=>{
           setDisplay(true);
           setVals([...vals, {
-            id: vals[1].id+1,
+            id: isNaN(maxId) ? 1 : maxId + 1,
             school: "",
             degree: "",
             startdate: "",
@@ -20,7 +21,7 @@ export default function EducationList({vals, setVals}) {
             display: true
            }]);
         }} >+ Education</button>}
-      {console.log(vals, display)}
+      {/* {console.log(vals, display)} */}
     </div>
   )
 }
