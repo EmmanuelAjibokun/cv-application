@@ -4,7 +4,8 @@ import Save from "../Save"
 import Delete from "../Delete"
 import Cancel from "../Cancel"
 
-export default function NewEducation({ index, val, vals, setVals, setDisplay, setDisplayNewEducation}) {
+export default function NewEducation({ index, val, vals, setVals, setDisplay}) {
+
   function handleChange(e) {
     const newVals = [...vals]
     newVals[index][e.target.name] = e.target.value
@@ -62,7 +63,7 @@ export default function NewEducation({ index, val, vals, setVals, setDisplay, se
 
         <div className="buttons">
           <Delete />
-          <Cancel setDisplay={setDisplay} setDisplayNewEducation={setDisplayNewEducation} val={val} vals={vals} setVals={setVals} />
+          <Cancel setDisplay={setDisplay} val={val} vals={vals} setVals={setVals} />
           <Save />
         </div>
       </div>
