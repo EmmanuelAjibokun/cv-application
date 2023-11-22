@@ -15,11 +15,6 @@ function App() {
   const [addr, setAddr] = useState("Lagos, Nigeria")
 
   // Education states
-  const [school, setSchool] = useState("FUTA")
-  const [degree, setDegree] = useState("Applied Geology")
-  const [startdate, setStartdate] = useState("17/02/2019")
-  const [enddate, setEnddate] = useState("present")
-  const [location, setLocation] = useState("Akure, Nigeria")
   const [newEducation, setNewEducation] = useState([
     {
       id: 0,
@@ -64,10 +59,6 @@ function App() {
           vals={newEducation} 
           setVals={setNewEducation} 
           />
-        {/* <Education 
-          val={{school, degree, startdate, enddate, location}} 
-          setVal={{setSchool, setDegree, setStartdate, setEnddate, setLocation}} 
-          /> */}
         <Experience
           val={{company, position, startdate2, enddate2, location2, description}}
           setVal={{setCompany, setPosition, setStartdate2, setEnddate2, setLocation2, setDescription}} />
@@ -75,7 +66,7 @@ function App() {
       <sections className="cv">
         <Template 
           val={{person, mail, num, addr}} 
-          educationVal={{school, degree, startdate, enddate, location}} 
+          educationVal={newEducation} 
           experienceVal={{company, position, startdate2, enddate2, location2, description}} 
           />
       </sections>

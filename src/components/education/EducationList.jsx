@@ -4,7 +4,7 @@ import Capsule from "./capsule"
 
 export default function EducationList({vals, setVals}) {
   const [display, setDisplay] = useState(false);
-  const maxId = Math.max(...vals.map(item => item.id));
+  const maxId =vals.length > 0 ? Math.max(...vals.map(item => item.id)): 1;
 
   return (
     <div className="education-list">

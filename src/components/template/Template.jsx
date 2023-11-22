@@ -3,7 +3,11 @@ import mail from '../../assets/mail.png'
 import phone from '../../assets/phone.png'
 import location from '../../assets/location.png'
 
+import ShowEducation from './ShowEducation'
+
+
 export default function Template({val, educationVal, experienceVal}) {
+
   return (
     <div className='template'>
       <div className="header">
@@ -27,16 +31,8 @@ export default function Template({val, educationVal, experienceVal}) {
       <div className="body">
         <div className="subbody">
           <h4>Education</h4>
-          <div className="cat">
-            <div className="left_side">
-              <p>{educationVal.startdate} - {educationVal.enddate}</p>
-              <p>{educationVal.location}</p>
-            </div>
-            <div className="right_side">
-              <p>{educationVal.school}</p>
-              <p>{educationVal.degree}</p>
-            </div>
-          </div>
+          {/* {showEducation(educationVal)} */}
+          <ShowEducation educationVal={educationVal} />
         </div>
         <div className="subbody">
           <h4>Professional Experience</h4>
