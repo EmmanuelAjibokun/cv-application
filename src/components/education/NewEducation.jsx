@@ -22,7 +22,7 @@ export default function NewEducation({ index, val, vals, setVals, setDisplay}) {
             name="school"
             value={val.school}
             placeholder="Enter School / University"
-            onChange={handleChange} />
+            onChange={handleChange} required />
         </div>
         <div>
         <p>Degree</p>
@@ -31,7 +31,7 @@ export default function NewEducation({ index, val, vals, setVals, setDisplay}) {
           name="degree"
           value={val.degree} 
           placeholder="Enter Degree / Field Of Study"
-          onChange={handleChange} />
+          onChange={handleChange} required />
         </div>
         <div>
         <p>Start Date</p>
@@ -40,31 +40,31 @@ export default function NewEducation({ index, val, vals, setVals, setDisplay}) {
           name="startdate"
           value={val.startdate}
           placeholder="Enter Start Date"
-          onChange={handleChange} />
+          onChange={handleChange} required />
         </div>
         <div>
         <p>End Date</p>
         <input 
-          type="text" 
+          type="text"
           name="enddate"
           value={val.enddate}
           placeholder="Enter End Date"
-          onChange={handleChange} />
+          onChange={handleChange} required />
         </div>
         <div>
         <p>Location <span>optional</span></p>
         <input 
-          type="text" 
+          type="text"
           name="location"
           value={val.location}
           placeholder="Enter Location"
-          onChange={handleChange} />
+          onChange={handleChange} required />
         </div>
 
         <div className="buttons">
-          <Delete />
+          <Delete setDisplay={setDisplay} val={val} vals={vals} setVals={setVals} />
           <Cancel setDisplay={setDisplay} val={val} vals={vals} setVals={setVals} />
-          <Save />
+          <Save setDisplay={setDisplay} val={val} vals={vals} setVals={setVals} />
         </div>
       </div>
     </form>
