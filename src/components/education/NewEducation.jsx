@@ -62,8 +62,7 @@ export default function NewEducation({ index, val, vals, setVals, setDisplay, te
         </div>
 
         <div className="buttons">
-          {console.log("from current education", val)}
-          {console.log("from current education: temp", temporaryClickedEducation)}
+
           <Delete setDisplay={setDisplay} val={val} vals={vals} setVals={setVals} temporaryClickedEducation={temporaryClickedEducation} />
           <Cancel setDisplay={setDisplay} val={val} vals={vals} setVals={setVals} temporaryClickedEducation={temporaryClickedEducation} />
           <Save setDisplay={setDisplay} val={val} vals={vals} setVals={setVals} />
