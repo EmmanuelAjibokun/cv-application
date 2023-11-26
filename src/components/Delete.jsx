@@ -1,7 +1,8 @@
-export default function Delete ({setDisplay, vals, setVals}) {
+export default function Delete ({setDisplay, val, vals, setVals}) {
   function handleClick() {
     const newVals = [...vals]
-    setVals(newVals.map(item => ({...item, display: false})))
+    console.log(val)
+    setVals(newVals.filter(item => item.id !== val.id))
     setDisplay(false)
   }
   return <button onClick={handleClick}>Delete</button>
