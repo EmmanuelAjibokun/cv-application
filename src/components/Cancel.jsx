@@ -14,7 +14,7 @@ export default function Cancel ({setDisplay, vals, setVals}) {
           console.log(key)
           break;
         }
-        console.log(2, key)
+        // console.log(2, key)
       }
       i += 1;
     }

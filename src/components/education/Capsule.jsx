@@ -14,7 +14,7 @@ export default function Capsule({index, val, vals, setVals, display, setDisplay}
   return (
     <div className="capsule">
       {display || <p className="capsule-name" onClick={handleClick}>{val.school}</p>}
-      {val.display && display && <NewEducation index={index} val={val} vals={vals} setVals={setVals} setDisplay={setDisplay} />}
+      {val.display && display && <NewEducation index={index} val={val} vals={vals} setVals={setVals} setDisplay={setDisplay} temporaryClickedEducation={val} />}
     </div>
   )
 }

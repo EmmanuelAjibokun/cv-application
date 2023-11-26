@@ -4,8 +4,8 @@ import Save from "../Save"
 import Delete from "../Delete"
 import Cancel from "../Cancel"
 
-export default function NewEducation({ index, val, vals, setVals, setDisplay}) {
-
+export default function NewEducation({ index, val, vals, setVals, setDisplay, temporaryClickedEducation}) {
+  
   function handleChange(e) {
     const newVals = [...vals]
     newVals[index][e.target.name] = e.target.value
@@ -13,7 +13,7 @@ export default function NewEducation({ index, val, vals, setVals, setDisplay}) {
   }
 
   return (
-    <form action="#">
+    <form action="#" required>
       <div className="user-details">
         <div>
           <p>School</p>
@@ -62,9 +62,10 @@ export default function NewEducation({ index, val, vals, setVals, setDisplay}) {
         </div>
 
         <div className="buttons">
-          <Delete setDisplay={setDisplay} val={val} vals={vals} setVals={setVals} />
-          <Cancel setDisplay={setDisplay} val={val} vals={vals} setVals={setVals} />
-          <Save setDisplay={setDisplay} val={val} vals={vals} setVals={setVals} />
+          {console.log("from current education", val)}
+          <Delete setDisplay={setDisplay} val={val} vals={vals} setVals={setVals} temporaryClickedEducation={temporaryClickedEducation} />
+          <Cancel setDisplay={setDisplay} val={val} vals={vals} setVals={setVals} temporaryClickedEducation={temporaryClickedEducation} />
+          <Save setDisplay={setDisplay} val={val} vals={vals} setVals={setVals} temporaryClickedEducation={temporaryClickedEducation} />
         </div>
       </div>
     </form>

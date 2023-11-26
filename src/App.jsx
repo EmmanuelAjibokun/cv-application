@@ -17,7 +17,7 @@ function App() {
   // Education states
   const [newEducation, setNewEducation] = useState([
     {
-      id: 0,
+      id: 1,
       school: "FUTA",
       degree: "Applied Geology",
       startdate: "17/02/2019",
@@ -26,7 +26,7 @@ function App() {
       display: false
     },
     {
-      id: 1,
+      id: 2,
       school: "UNILAG",
       degree: "Applied Geophysics",
       startdate: "17/02/2019",
