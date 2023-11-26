@@ -1,10 +1,7 @@
 import NewEducation from "./NewEducation"
 import { useRef } from "react"
 
-export default function Capsule({index, val, vals, setVals, display, setDisplay}) {
-  // function createNewEducation () {
-  //   const newVals = [...vals]
-  // }
+export default function Capsule({index, val, vals, setVals, display, setDisplay, cancelField}) {
   const temporaryClickedEducationRef = useRef(val)
   console.log(temporaryClickedEducationRef.current)
   
@@ -19,7 +16,7 @@ export default function Capsule({index, val, vals, setVals, display, setDisplay}
   return (
     <div className="capsule">
       {display || <p className="capsule-name" onClick={handleClick}>{val.school}</p>}
-      {val.display && display && <NewEducation index={index} val={val} vals={vals} setVals={setVals} setDisplay={setDisplay} temporaryClickedEducation={temporaryClickedEducationRef.current} />}
+      {val.display && display && <NewEducation index={index} val={val} vals={vals} setVals={setVals} setDisplay={setDisplay} temporaryClickedEducation={temporaryClickedEducationRef.current} cancelField={cancelField} />}
     </div>
   )
 }

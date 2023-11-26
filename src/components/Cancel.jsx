@@ -1,5 +1,4 @@
-export default function Cancel ({setDisplay, val, vals, setVals, temporaryClickedEducation}) {
-  {console.log("from current education: temp", temporaryClickedEducation)}
+export default function Cancel ({setDisplay, val, vals, setVals, temporaryClickedEducation, cancelField}) {
 
   function handleClick() {
     const newVals = [...vals]
@@ -10,30 +9,11 @@ export default function Cancel ({setDisplay, val, vals, setVals, temporaryClicke
       } else
         return item;
     })
-    // const lastVal = vals[vals.length - 1]
-    // let i = 0;
+    if (cancelField.cancelField) {
+      updatedVal.pop()
+      cancelField.setCancelField(false)
+    }
 
-    // console.log(lastVal)
-
-    // for (const key in val) {
-    //   if (key === "school") {
-    //     if (lastVal[key]) {
-    //       setVals(newVals.map(item => ({...item, display: false})))
-    //       setDisplay(false)
-    //       console.log(key)
-    //       break;
-    //     }
-    //   }
-    //   i += 1;
-    // }
-    // console.log(i)
-    // if (i == 7) {
-    //   console.log(i)
-    //   newVals.pop()
-    //   console.log(newVals)
-    //   setVals(newVals)
-    //   setDisplay(false)
-    // }
     setVals(updatedVal)
     setDisplay(false)
   }
