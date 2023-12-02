@@ -1,4 +1,5 @@
-import NewExperience from "./NewExperience"
+// import NewExperience from "./NewExperience"
+import ExperienceList from "./ExperienceList"
 import caret from '../../assets/caret.png'
 import briefcase from '../../assets/briefcase.png'
 
@@ -25,7 +26,7 @@ export default function Experience ({val, setVal}) {
         <img src={caret} alt="caret dropdown icon" className="caret" style={style} />
       </div>
       
-      {isActive && <NewExperience val={val} setVal={setVal} />}
+      {isActive && <ExperienceList val={val} setVal={setVal} />}
     </div>
   )
 }

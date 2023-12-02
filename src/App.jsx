@@ -35,14 +35,20 @@ function App() {
       display: false
     }
   ])
+  
+  const [newExperience, setNewExperience] = useState([
+    {
+      id: 1,
+      company: "OODT",
+      position: "Interning Student",
+      startdate: "17/02/2019",
+      enddate: "present",
+      location: "Akure, Nigeria",
+      description: "Data Scientist and Machine Learning Engineer",
+      display: false
+    }
+  ])
 
-  // Experience states
-  const [company, setCompany] = useState("OODT")
-  const [position, setPosition] = useState("Interning Student")
-  const [startdate2, setStartdate2] = useState("17/02/2019")
-  const [enddate2, setEnddate2] = useState("present")
-  const [location2, setLocation2] = useState("Akure, Nigeria")
-  const [description, setDescription] = useState("Data Scientist and Machine Learning Engineer")
 
   return (
     <div className='app'>
@@ -60,14 +66,14 @@ function App() {
           setVals={setNewEducation} 
           />
         <Experience
-          val={{company, position, startdate2, enddate2, location2, description}}
-          setVal={{setCompany, setPosition, setStartdate2, setEnddate2, setLocation2, setDescription}} />
+          vals={newExperience}
+          setVals={setNewExperience} />
       </sidebar>
       <sections className="cv">
         <Template 
           val={{person, mail, num, addr}} 
           educationVal={newEducation} 
-          experienceVal={{company, position, startdate2, enddate2, location2, description}} 
+          experienceVal={newExperience} 
           />
       </sections>
     </div>
