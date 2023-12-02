@@ -7,7 +7,7 @@ import '../education/education.css'
 
 import { useState } from "react"
 
-export default function Experience ({val, setVal}) {
+export default function Experience ({vals, setVals}) {
   const [isActive, setIsActive] = useState(false);
   const style = {
     transform: isActive ? "rotate(180deg)": "",
@@ -19,14 +19,14 @@ export default function Experience ({val, setVal}) {
       <div className= "dropdown_header"
         onClick={() => {
           setIsActive(!isActive);
-        }} 
+        }}
       >
         <img src={briefcase} alt="graduation hat icon" className="education" />
         <h2>Experience</h2>
         <img src={caret} alt="caret dropdown icon" className="caret" style={style} />
       </div>
       
-      {isActive && <ExperienceList val={val} setVal={setVal} />}
+      {isActive && <ExperienceList vals={vals} setVals={setVals} />}
     </div>
   )
 }

@@ -1,4 +1,4 @@
-import NewExperience from "./NewExperience"
+// import NewExperience from "./NewExperience"
 import { useRef } from "react"
 
 export default function Capsule({index, val, vals, setVals, display, setDisplay, cancelField}) {
