@@ -63,8 +63,8 @@ export default function NewEducation({ index, val, vals, setVals, setDisplay, te
 
         <div className="buttons">
 
-          <Delete setDisplay={setDisplay} val={val} vals={vals} setVals={setVals} temporaryClickedEducation={temporaryClickedEducation} />
-          <Cancel setDisplay={setDisplay} val={val} vals={vals} setVals={setVals} temporaryClickedEducation={temporaryClickedEducation} cancelField={cancelField} />
+          <Delete setDisplay={setDisplay} val={val} vals={vals} setVals={setVals} temporaryClicked={temporaryClickedEducation} />
+          <Cancel setDisplay={setDisplay} val={val} vals={vals} setVals={setVals} temporaryClicked={temporaryClickedEducation} cancelField={cancelField} />
           <Save setDisplay={setDisplay} val={val} vals={vals} setVals={setVals} />
         </div>
       </div>

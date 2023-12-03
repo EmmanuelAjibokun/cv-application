@@ -2,7 +2,7 @@ import Save from "../Save"
 import Delete from "../Delete"
 import Cancel from "../Cancel"
 
-export default function NewExperience({ index, val, vals, setVals, setDisplay, temporaryClickedEducation, cancelField}) {
+export default function NewExperience({ index, val, vals, setVals, setDisplay, temporaryClickedExperience, cancelField}) {
   function handleChange(e) {
     const newVals = [...vals]
     newVals[index][e.target.name] = e.target.value
@@ -55,7 +55,7 @@ export default function NewExperience({ index, val, vals, setVals, setDisplay, t
             name="location"
             value={val.location} 
             placeholder="Enter Location"
-            onChange={handleChange} />
+            onChange={handleChange} required />
         </div>
         <div>
           <p>Description <span>optional</span></p>
@@ -64,12 +64,12 @@ export default function NewExperience({ index, val, vals, setVals, setDisplay, t
             name="description"
             value={val.description} 
             placeholder="Enter Location"
-            onChange={handleChange}></textarea>
+            onChange={handleChange} required></textarea>
         </div>
         <div className="buttons">
-          <Delete setDisplay={setDisplay} val={val} vals={vals} setVals={setVals} temporaryClickedEducation={temporaryClickedEducation} />
-          <Cancel setDisplay={setDisplay} val={val} vals={vals} setVals={setVals} temporaryClickedEducation={temporaryClickedEducation} cancelField={cancelField} />
-          <Save />
+          <Delete setDisplay={setDisplay} val={val} vals={vals} setVals={setVals} temporaryClicked={temporaryClickedExperience} />
+          <Cancel setDisplay={setDisplay} val={val} vals={vals} setVals={setVals} temporaryClicked={temporaryClickedExperience} cancelField={cancelField} />
+          <Save setDisplay={setDisplay} val={val} vals={vals} setVals={setVals}/>
         </div>
 
       </div>
