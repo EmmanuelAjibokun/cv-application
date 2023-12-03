@@ -67,7 +67,7 @@ export default function NewExperience({ index, val, vals, setVals, setDisplay, t
             onChange={handleChange}></textarea>
         </div>
         <div className="buttons">
-          <Delete />
+          <Delete setDisplay={setDisplay} val={val} vals={vals} setVals={setVals} temporaryClickedEducation={temporaryClickedEducation} />
           <Cancel setDisplay={setDisplay} val={val} vals={vals} setVals={setVals} temporaryClickedEducation={temporaryClickedEducation} cancelField={cancelField} />
           <Save />
         </div>
