@@ -73,7 +73,7 @@ function App() {
         <Template 
           val={{person, mail, num, addr}} 
           educationVal={newEducation} 
-          experienceVal={newExperience} 
+          experienceVal={newExperience}
           />
       </sections>
     </div>

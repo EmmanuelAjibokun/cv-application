@@ -4,6 +4,7 @@ import phone from '../../assets/phone.png'
 import location from '../../assets/location.png'
 
 import ShowEducation from './ShowEducation'
+import ShowExperience from './showExperience'
 
 
 export default function Template({val, educationVal, experienceVal}) {
@@ -36,17 +37,7 @@ export default function Template({val, educationVal, experienceVal}) {
         </div>
         <div className="subbody">
           <h4>Professional Experience</h4>
-          <div className="cat">
-            <div className="left_side">
-              <p>{experienceVal.startdate2} - {experienceVal.enddate2}</p>
-              <p>{experienceVal.location2}</p>
-            </div>
-            <div className="right_side">
-              <p>{experienceVal.company}</p>
-              <p>{experienceVal.position}</p>
-              <p>{experienceVal.description}</p>
-            </div>
-          </div>
+          <ShowExperience experienceVal={experienceVal} />
         </div>
       </div>
     </div>
