@@ -2,7 +2,13 @@ import Save from "../Save"
 import Delete from "../Delete"
 import Cancel from "../Cancel"
 
-export default function NewExperience({val,vals, setVal}) {
+export default function NewExperience({ index, val, vals, setVals, setDisplay, temporaryClickedEducation, cancelField}) {
+  function handleChange(e) {
+    const newVals = [...vals]
+    newVals[index][e.target.name] = e.target.value
+    setVals(newVals)
+  }
+
   return (
     <form action="#">
       <div className="user-details">
@@ -11,44 +17,45 @@ export default function NewExperience({val,vals, setVal}) {
           <input 
             type="text"
             name="company"
-            value={val[0].company}
+            value={val.company}
             placeholder="Enter Company Name"
-            onChange={e => setVal.setCompany(e.target.value)} required />
+            onChange={handleChange} required />
         </div>
         <div>
           <p>Position Title</p>
           <input 
             type="text"
             name="position"
-            value={val[0].position} 
+            value={val.position} 
             placeholder="Enter Position Title"
-            onChange={e => setVal.setPosition(e.target.value)} required />
+            onChange={handleChange} required />
         </div>
         <div>
           <p>Start Date</p>
           <input 
             type="text"
             name="startdate"
-            value={val[0].startdate}
+            value={val.startdate}
             placeholder="Enter Start Date"
-            onChange={e => setVal.setStartdate2(e.target.value)} required />
+            onChange={handleChange} required />
         </div>
         <div>
           <p>End Date</p>
           <input 
             type="text"
             name="enddate"
-            value={val[0].enddate2} 
+            value={val.enddate2} 
             placeholder="Enter End Date"
-            onChange={e => setVal.setEnddate2(e.target.value)} required />
+            onChange={handleChange} required />
         </div>
         <div>
           <p>Location <span>optional</span></p>
           <input 
             type="text"
             name="location"
-            value={val.location2} 
-            placeholder="Enter Location" />
+            value={val.location} 
+            placeholder="Enter Location"
+            onChange={handleChange} />
         </div>
         <div>
           <p>Description <span>optional</span></p>
@@ -56,11 +63,12 @@ export default function NewExperience({val,vals, setVal}) {
             rows={10}
             name="description"
             value={val.description} 
-            placeholder="Enter Location"></textarea>
+            placeholder="Enter Location"
+            onChange={handleChange}></textarea>
         </div>
         <div className="buttons">
           <Delete />
-          <Cancel />
+          <Cancel setDisplay={setDisplay} val={val} vals={vals} setVals={setVals} temporaryClickedEducation={temporaryClickedEducation} cancelField={cancelField} />
           <Save />
         </div>
 
