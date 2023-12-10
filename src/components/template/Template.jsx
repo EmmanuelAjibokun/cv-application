@@ -32,7 +32,6 @@ export default function Template({val, educationVal, experienceVal}) {
       <div className="body">
         <div className="subbody">
           <h4>Education</h4>
-          {/* {showEducation(educationVal)} */}
           <ShowEducation educationVal={educationVal} />
         </div>
         <div className="subbody">

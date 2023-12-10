@@ -1,5 +1,5 @@
 import { useState } from "react"
-import Capsule from "./capsule"
+import Capsule from "./Capsule"
 
 export default function EducationList({vals, setVals}) {
   const [display, setDisplay] = useState(false);

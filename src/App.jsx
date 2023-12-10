@@ -56,7 +56,11 @@ function App() {
         <div className='content'>
           <div>Content</div>
         </div>
-        <FastAction />
+        <FastAction
+          setVal={{setPerson, setMail, setNum, setAddr}}
+          setEducationVal={setNewEducation}
+          setExperienceVal={setNewExperience}
+         />
         <Personal 
           val={{person, mail, num, addr}} 
           setVal={{setPerson, setMail, setNum, setAddr}} 
