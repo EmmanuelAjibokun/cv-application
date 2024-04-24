@@ -13,3 +13,6 @@ This user-friendly tool simplifies the process of creating professional resumes.
 
 ## Objective
 The main objective of this project is to gain practical understanding of how the `useState` hook works, thereby getting familiar with `Rendering` code and adding `Event Handler` to our react app.
+
+
+Live Preview:  https://top-cv-application-pi.vercel.app/
